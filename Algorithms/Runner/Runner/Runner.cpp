@@ -1,5 +1,6 @@
-// BubbleSort.cpp : Defines the entry point for the console application.
+// Runner.cpp : Defines the entry point for the console application.
 //
+
 #include "stdafx.h"
 #include "UserInterface.h"
 #include "BubbleSort.h"
@@ -8,9 +9,11 @@
 #include "MergeSort.h"
 #include "QuickSort.h"
 
+using namespace std;
+
 int main()
 {
-	
+
 	while (1)
 	{
 		int n;
@@ -23,14 +26,14 @@ int main()
 		if (option == 6) break;
 
 		n = ui.iGetArraySizeFromUser();
-		ui.vGetArrayFromUser(arr,n);
+		ui.vGetArrayFromUser(arr, n);
 
 		//TODO: Move this to Factory Class Implementation
 		Sort *sorter;
 		switch (option)
 		{
 		case 1:
-			sorter = new BubbleSort(arr,n);
+			sorter = new BubbleSort(arr, n);
 			break;
 		case 2:
 			sorter = new SelectionSort(arr, n);
@@ -47,10 +50,10 @@ int main()
 		default:
 			cout << "Option unavailable, Please try again" << endl;
 		}
-		ui.vDisplayArray(sorter->iGetArray(),sorter->iGetArraySize());
+		ui.vDisplayArray(sorter->iGetArray(), sorter->iGetArraySize());
 		sorter->vSort();
-		ui.vDisplayArray(sorter->iGetArray(),sorter->iGetArraySize());
+		ui.vDisplayArray(sorter->iGetArray(), sorter->iGetArraySize());
 	}
-    return 0;
+	return 0;
 }
 

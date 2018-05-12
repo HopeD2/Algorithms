@@ -11,7 +11,5 @@
 #include <tchar.h>
 #include <iostream>
 
-#define MAX_LENGTH 1000
-
 
 // TODO: reference additional headers your program requires here

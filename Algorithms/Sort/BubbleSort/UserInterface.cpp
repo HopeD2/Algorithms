@@ -12,7 +12,7 @@ UserInterface::~UserInterface()
 void UserInterface::vDisplayMenu()
 {
 	cout << "Select the type of Sorting Algorithm you want to use : "<<endl;
-	cout << "1)Bubble Sort\n2)Selection Sort\n3)Insertion Sort\n6)Exit\n";
+	cout << "1)Bubble Sort\n2)Selection Sort\n3)Insertion Sort\n4)MergeSort\n5)QuickSort\n6)Exit\n";
 }
 
 int UserInterface::iGetUserInput()
@@ -26,7 +26,7 @@ void UserInterface::vDisplayArray(int * arr, int sizeofArray)
 {
 	for (int i = 0; i < sizeofArray; i++)
 	{
-		cout << arr[i];
+		cout << arr[i] <<" ";
 	}
 	cout << endl;
 }

@@ -5,6 +5,8 @@
 #include "BubbleSort.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
+#include "MergeSort.h"
+#include "QuickSort.h"
 
 int main()
 {
@@ -35,6 +37,12 @@ int main()
 			break;
 		case 3:
 			sorter = new InsertionSort(arr, n);
+			break;
+		case 4:
+			sorter = new MergeSort(arr, n);
+			break;
+		case 5:
+			sorter = new QuickSort(arr, n);
 			break;
 		default:
 			cout << "Option unavailable, Please try again" << endl;

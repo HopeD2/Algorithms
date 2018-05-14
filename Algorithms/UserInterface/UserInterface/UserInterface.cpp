@@ -1,13 +1,8 @@
-#include "stdafx.h"
 #include "UserInterface.h"
 
-UserInterface::UserInterface()
-{
-}
+UserInterface::UserInterface() { }
 
-UserInterface::~UserInterface()
-{
-}
+UserInterface::~UserInterface() { }
 
 void UserInterface::vDisplayMenu()
 {
@@ -34,7 +29,7 @@ void UserInterface::vDisplayArray(int * arr, int sizeofArray)
 int UserInterface::iGetArraySizeFromUser()
 {
 	int arraySize;
-	cout << "Enter number of elements in the array : ";
+	cout << "Enter number of elements : ";
 	cin>>arraySize;
 	cout << "\n";
 	return arraySize ;
@@ -42,7 +37,7 @@ int UserInterface::iGetArraySizeFromUser()
 
 void UserInterface::vGetArrayFromUser(int* arr,int size)
 {
-	cout << "Enter Array Elements : ";
+	cout << "Enter the Elements : ";
 	for (int i = 0; i < size; i++)
 	{
 		cin >> arr[i];

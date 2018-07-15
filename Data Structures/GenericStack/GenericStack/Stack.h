@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include "LinkedList.h"
+#include "Node.h"
 
 namespace ds{
 
@@ -22,6 +22,7 @@ namespace ds{
 		void vDisplay();
 		void vPerformAction();
 		bool bIsEmpty();
+		unsigned int uiGetSize();
 	};
 
 }

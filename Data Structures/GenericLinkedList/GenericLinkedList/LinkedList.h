@@ -2,27 +2,11 @@
 
 #include <iostream>
 #include <string>
+#include "Node.h"
 
 using namespace std;
 
 namespace ds {
-
-	template <class T_LinkedList>
-	struct Node {
-		T_LinkedList elem;
-		Node<T_LinkedList> *next;
-	public:
-		Node(T_LinkedList elem):elem(elem) 
-		{
-			next = NULL;
-		}
-		
-		~Node()
-		{
-			//elem = NULL;
-			next = NULL;
-		}
-	};
 
 	template <class T_LinkedList>
 	class LinkedList {

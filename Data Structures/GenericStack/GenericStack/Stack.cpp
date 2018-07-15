@@ -129,7 +129,7 @@ void ds::Stack<T_Stack>::vPerformAction()
 	while (1)
 	{
 		cout << "Select the action you want to perform\n1)Push\n2)Pop \
-\n3)Peek\n4)Display\n5)Reselect data type or Exit this menu\n";
+\n3)Peek\n4)Display\n5)Display Stack Size\n6)Reselect data type or Exit this menu\n";
 
 
 		cin >> option;
@@ -181,7 +181,10 @@ void ds::Stack<T_Stack>::vPerformAction()
 		case 4:
 			this->vDisplay();
 			break;
-		case 5: //Exit
+		case 5:
+			this->uiGetSize();
+			break;
+		case 6: //Exit
 			return;
 		default:
 			cout << "Action does not exist\n";
@@ -193,4 +196,10 @@ template<class T_Stack>
 bool ds::Stack<T_Stack>::bIsEmpty()
 {
 	return (m_size == 0);
+}
+
+template<class T_Stack>
+unsigned int ds::Stack<T_Stack>::uiGetSize()
+{
+	return m_size;
 }
